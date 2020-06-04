@@ -1,0 +1,45 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    text-align: center;
+}
+
+.answer{
+    background-color:purple;
+    color: white;
+    text-align: justify;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: auto 25px;
+    padding: 10px 20px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    width: 90%;
+   
+}
+
+#start-button{
+    background-color: gray;
+    color: white;
+    font-weight: 600;
+    text-align: justify;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 10px 25px;
+    padding: 10px 20px;
+    
+}
+
+  @media screen and (min-width: 600px) {
+    .answer {
+      background-color: lightgreen;
+      width: 70%;
+    }
+  }
+  
+  @media screen and (min-width: 800px) {
+    .answer {
+      background-color:purple;
+      width: 40%;
+    }
+  }

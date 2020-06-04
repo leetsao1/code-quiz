@@ -3,14 +3,39 @@
 <head>
     <meta charset="utf-8">
     <title>Code Quiz</title>
+    <link href="./Assets/css/style.css" type="text/css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
+    <header>
+        <div id="timer-header">
+            <h1 class="time"></h1>
+            <div id="main"></div>
+        </div>
+    </header>
+
     <div>
-        Hello there
+        <h1 class="title-header"></h1>
+        <h2 class="question"></h2>
+
+        <div class="multiple-choice">
+            <p class="content"></p>
+            <!-- All multiple choice options will go here -->
+        </div>
+
+        <button id="start-button" type="button">Start Quiz!</button>
     </div>
 
+    <div class="score">
+
+    </div>
+
+<!-- Timer script -->
+<script src="./Assets/javaScript/timer.js"></script>
+
+<!-- Home Page Script -->
+<script src="./Assets/javaScript/quiz.js"></script>
 
 </body>
 
