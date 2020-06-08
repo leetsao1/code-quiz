@@ -32,6 +32,7 @@ $(document).ready(function () {
     setTime();
     //$("#start-button").remove();
     $(".content").remove();
+    
   });
 
   //setTime();

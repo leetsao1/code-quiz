@@ -18,6 +18,7 @@ $(document).ready(function () {
       answer: "parentheses3",
     },
   ];
+  var score = 0;
 
   //HTML INTRO
   $(".title-header").text("Code Quiz 1");
@@ -25,7 +26,7 @@ $(document).ready(function () {
 
 
   function makeQuestion() {
-    var score = 0;
+    
 
     //Generates random number and index
     var randomIndex = Math.floor(Math.random() * questions.length);
@@ -36,33 +37,39 @@ $(document).ready(function () {
     
     $('.title-header').text("Question #" + randomQuestionNumber);
     $(".question").text(questions[randomIndex].title);
-    $('#start-button').text('Next');
+    
+
+ 
 
     // Generates answers at random index
     for (var j = 0 ; j < questions[randomIndex].choices.length; j++){
       $(".multiple-choice").append('<p><button id="button" class="answer-button" value="'+j+'" >' + questions[randomIndex].choices[j] +'</button></p>'); 
+      $('#start-button').text('Next');
     }
-    $(".multiple-choice").append('<p><button id="next" class="button">Next </button></p>'); 
 
     // Function checks for right answer by clicking and returning value
     $(".answer-button").on("click", function(){
+      
       var selectedAnswer = $(this).val();
       console.log(selectedAnswer);
       $(".answer-button").remove();
+      
 
       // $('#next').on(click, function(){
       //   $(".answer-button").remove();
       // })
 
-
+      
       if( questions[randomIndex].choices[selectedAnswer] === questions[randomIndex].answer){
         score++;
         console.log("the answer is correct!, Score: " + score);
-        return;
+        $('#score-field').text("Your score is: "+ score);
+
       }
       else {
         console.log("the answer is WRONG!!, Score: " + score);
-        return;
+        $('#score-field').text("Your score is: "+score);
+
       }
 
     });
