@@ -5,7 +5,7 @@ body{
     text-align: center;
 }
 
-.answer{
+.answer-button {
     background-color:purple;
     color: white;
     text-align: justify;
@@ -31,14 +31,14 @@ body{
 }
 
   @media screen and (min-width: 600px) {
-    .answer {
+    .answer-button {
       background-color: lightgreen;
       width: 70%;
     }
   }
   
   @media screen and (min-width: 800px) {
-    .answer {
+    .answer-button {
       background-color:purple;
       width: 40%;
     }

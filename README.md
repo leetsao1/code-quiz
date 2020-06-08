@@ -66,3 +66,38 @@ You are required to submit the following for review:
 ---
 
 © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+
+
+
+var quizQuestions = {
+    
+    question1: {
+        prompt1: 'What does HTML stand for?',
+        optionA: 'html stands for hyper-text-mark-up-language',
+        optionB: 'some answerB',
+        optionC: 'some answerC',
+        optionD: 'some answerD',
+    },
+    question2: {
+        prompt2: 'Some question 2!!',
+        optionA: 'some answerA.2',
+        optionB: 'some answerB.2',
+        optionC: 'some answerC.2',
+        optionD: 'some answerD.2'
+    },
+    question3: {
+        prompt3: 'also some question 3!',
+        optionA: 'some answerA.3',
+        optionB: 'some answerB.3',
+        optionC: 'some answerC.3',
+        optionD: 'some answerD.3'
+    }
+}
+
+
+// for ( var key in quizQuestions){
+//     console.log(quizQuestions[key]:${value})
+// }
+for (let [key, value] of Object.entries(quizQuestions)) {
+    console.log(`${key}: ${value}`);
+  }
