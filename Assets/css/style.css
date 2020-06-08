@@ -15,8 +15,13 @@ body{
     padding: 10px 20px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     width: 90%;
-   
 }
+
+
+.answer-button:hover{
+  background-color: green;
+}
+
 
 #start-button{
     background-color: gray;
@@ -27,7 +32,9 @@ body{
     border-radius: 10px;
     margin: 10px 25px;
     padding: 10px 20px;
-    
+}
+#start-button:hover{
+background-color: green;
 }
 
   @media screen and (min-width: 600px) {

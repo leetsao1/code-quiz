@@ -31,6 +31,7 @@ $(document).ready(function () {
   $("#start-button").on("click", function () {
     setTime();
     //$("#start-button").remove();
+    $(".content").remove();
   });
 
   //setTime();
