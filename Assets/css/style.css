@@ -22,7 +22,6 @@ body{
   background-color: green;
 }
 
-
 #start-button{
     background-color: gray;
     color: white;
@@ -35,6 +34,10 @@ body{
 }
 #start-button:hover{
 background-color: green;
+}
+
+form{
+  text-align: center;
 }
 
   @media screen and (min-width: 600px) {

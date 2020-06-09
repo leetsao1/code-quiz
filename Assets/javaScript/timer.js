@@ -30,7 +30,7 @@ $(document).ready(function () {
   //starts timer and removes button
   $("#start-button").on("click", function () {
     setTime();
-    //$("#start-button").remove();
+    $("#start-button").remove();
     $(".content").remove();
     
   });
