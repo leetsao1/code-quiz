@@ -61,6 +61,24 @@ function randomNumber (){
     randomQuestionNumber++;
     }
   }
+
+  function displayResults (){
+    console.log("test is completed");
+    $(".title-header").text("Quiz Done");
+    $(".question").text("Your score is " + score);
+    $("#score-field").text("");
+
+    //generates form at the end of the quiz//
+    $("#score-field").append(`<div class="card text-center m-5">
+    <div class="card-header m-1">STUDENT INFORMATION</div>
+    <form class="form-center">
+    <label class="sr-only" for="inlineFormInputName2">Name</label>
+    <input style= "width:50%" type="text" class="form-control mx-auto m-2" id="inlineFormInputName2" placeholder="Enter your name..." required >
+    <button type="submit" class="submit">Submit</button>
+    </form>
+    <div class="card-footer text-muted">2 days ago</div>
+    </div>`);
+  }
   
   function makeQuestion() {
 
@@ -80,51 +98,28 @@ function randomNumber (){
       questions.splice(randomIndex, 1);
       makeQuestion();
 
-    });  
-   }
+     });  
+    }
 
-   if (objectLength < 1) {
-    console.log("test is completed");
-    $(".title-header").text("Quiz Done");
-    $(".question").text("Your score is " + score);
-    $("#score-field").text("");
+    if (objectLength < 1) {
+     displayResults();
 
-    //generates form at the end of the quiz//
-    $("#score-field").append(`<div class="card text-center m-5">
-    <div class="card-header m-1">STUDENT INFORMATION</div>
-    <form class="form-center">
-    <label class="sr-only" for="inlineFormInputName2">Name</label>
-    <input style= "width:50%" type="text" class="form-control mx-auto m-2" id="inlineFormInputName2" placeholder="Enter your name..." required >
-    <button type="submit" class="btn btn-primary m-2">Submit</button>
-    </form>
-    <div class="card-footer text-muted">2 days ago</div>
-    </div>`);
+     //document.querySelector("#score-field > div > form > button").
+     $('.button').on(click,function(){
+      // var textInput = $(this).text().trim();
+      // console.log(textInput);
 
+      })
 
-
-
-
-
-
-
-   
-  }
-   
-   
+    }
   }
 
-  // if (questionLeft < 3) {
-  //   console.log("test is completed");
-  //   $(".title-header").text("The Quiz is Completed");
-  //   //$(".content").text("Your score is XX.");
-  // }
 
    //HTML INTRO
    $(".title-header").text("Code Quiz 1");
    $(".content").text("The test contains 3 questions. You have 60 seconds to answer the entire quiz."); 
 
-  $("#start-button").on("click", makeQuestion);
-  //$(".answer-button").on("click", makeQuestion);
 
+  $("#start-button").on("click", makeQuestion);
 
 }); //document ready
